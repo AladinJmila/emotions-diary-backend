@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from rest_framework.generics import ListAPIView
+from rest_framework.viewsets import ModelViewSet
 from .models import EmotionalState
 from .serializers import EmotionalStateSerializer
 
 
-class EmotionalStateListView(ListAPIView):
+class EmotionalStateViewSet(ModelViewSet):
     queryset = EmotionalState.objects.all()
     serializer_class = EmotionalStateSerializer
 
