@@ -10,4 +10,4 @@ class EmotionalState(models.Model):
     intensity = models.FloatField(
         validators=[MinValueValidator(0.0), MaxValueValidator(1.0)])
     triggers = models.TextField()
-    coping_mechanism = models.TextField()
+    coping_mechanisms = models.TextField()
