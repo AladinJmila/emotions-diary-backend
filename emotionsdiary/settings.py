@@ -62,6 +62,9 @@ INTERNAL_IPS = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:5173',
+]
+
+ALLOWED_HOSTS = [
     'emotions-diary-backend.onrender.com',
 ]
 
