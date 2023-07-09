@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -87,13 +88,14 @@ WSGI_APPLICATION = 'emotionsdiary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'emotionsdiary',
-        'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': 'z94uwjZEj32DuL'
+        'HOST': os.getenv('RDS_HOST'),
+        'USER': 'admin',
+        'PASSWORD': os.getenv('RDS_PASSWORD'),
     }
 }
 
